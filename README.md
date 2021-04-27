@@ -33,26 +33,6 @@ The diagram at the beginning was created with the following table format:
 | Aug | 54 | 41 | 48 | 54 | 55 | 33 | 42 | 70 |
 | Jul | 51 | 41 | 57 | 55 | 39 | 46 | 56 | 40 |
 
-CREATE TABLE `movies` (
-  `idx`        VARCHAR(10)    NOT NULL, 
-  `A`          INT(10)        NOT NULL,
-  `B`          INT(10)        NOT NULL,
-  `C`          INT(10)        NOT NULL,
-  `D`          INT(10)        NOT NULL,
-  `E`          INT(10)        NOT NULL,
-  `F`          INT(10)        NOT NULL,
-  `G`          INT(10)        NOT NULL,
-  `H`          INT(10)        NOT NULL,
-  PRIMARY KEY (`idx`)
-);
-
-INSERT INTO movies VALUE ("Dec", 64, 53, 36, 58, 42, 34, 43, 36 );
-INSERT INTO movies VALUE ("Nov", 41, 54, 56, 55, 47, 40, 45, 56 );
-INSERT INTO movies VALUE ("Oct", 41, 63, 44, 50, 56, 55, 54, 32 );
-INSERT INTO movies VALUE ("Sep", 25, 50, 38, 55, 51, 48, 15, 45 );
-INSERT INTO movies VALUE ("Aug", 54, 41, 48, 54, 55, 33, 42, 70 );
-INSERT INTO movies VALUE ("Jul", 51, 41, 57, 55, 39, 46, 56, 40 );
-
 ## Display Options
 
 ### Cell Color
@@ -77,11 +57,3 @@ In both cases, a symbol indicator is visible at the top-left side of the panel i
 ### Toggle Color on Click
 
 Boolean. If true toggles color between the two coloring options. Default false.
-
-## Installation
-nvm install 12.22.1
-nvm use 12.22.1
-npm install --global yarn
-
-yarn install
-yarn build

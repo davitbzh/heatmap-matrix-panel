@@ -84,7 +84,7 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
   const colorAsHeatmap = d3
     .scaleSequential()
     .domain(categoryExtent)
-    .interpolator(t => d3.interpolateBlues(clampColorRange(t)));
+    .interpolator(t => d3.interpolateReds(clampColorRange(t)));
 
   // SCALES
   const x = d3
