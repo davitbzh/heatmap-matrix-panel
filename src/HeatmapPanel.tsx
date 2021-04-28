@@ -105,7 +105,7 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
       .call(
         d3
           .axisTop(x)
-          .tickSize(4)
+          .tickSize(2)
           .tickSizeOuter(4)
       )
       .call(g => g.select('.domain').remove())
@@ -119,8 +119,9 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
       .call(
         d3
           .axisLeft(y)
-          .tickSize(4)
-          .tickSizeOuter(4)
+          .tickSize(2)
+          .tickPadding(4)
+          .ticks(5)
       )
       .call(g => g.select('.domain').remove())
       .selectAll('text')
