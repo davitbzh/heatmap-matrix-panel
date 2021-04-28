@@ -111,7 +111,7 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
       .call(g => g.select('.domain').remove())
       .selectAll('text')
       .attr('dy', '.2em')
-      .style('text-anchor', 'midle')
+      .style('text-anchor', 'middle')
       .style('fill', '#00ff00');
 
   const yAxis = g =>
@@ -121,11 +121,10 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
           .axisLeft(y)
           .tickSize(2)
           .tickPadding(4)
-          .ticks(5)
       )
       .call(g => g.select('.domain').remove())
       .selectAll('text')
-      .style('text-anchor', 'end')
+      .style('text-anchor', 'middle')
       .style('fill', '#00ff00')
       .attr('x', 2);
 
