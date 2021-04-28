@@ -16,7 +16,7 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
   // -----------------------  CHART CONFIGURATION  -----------------------
   const config = {
     cellPadding: 0.16,
-    background: '#f8f8fa',
+    background: '#000000',
     removeEmptyCols: true,
     colorBy: COLOR_CELL_BY[options.colorCellBy],
     toggleColor: options.toggleColor,
@@ -111,7 +111,8 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
       .call(g => g.select('.domain').remove())
       .selectAll('text')
       .attr('dy', '.2em')
-      .style('text-anchor', 'midle');
+      .style('text-anchor', 'midle')
+      .style('fill', '#00ff00');
 
   const yAxis = g =>
     g
@@ -124,6 +125,7 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
       .call(g => g.select('.domain').remove())
       .selectAll('text')
       .style('text-anchor', 'end')
+      .style('fill', '#00ff00')
       .attr('x', 2);
 
   // VALUE FORMATING
