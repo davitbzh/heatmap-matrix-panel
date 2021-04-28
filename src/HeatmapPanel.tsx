@@ -84,7 +84,7 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
   const colorAsHeatmap = d3
     .scaleSequential()
     .domain(categoryExtent)
-    .interpolator(t => d3.interpolateReds(clampColorRange(t)));
+    .interpolator(t => d3.interpolatePuRd(clampColorRange(t)));
 
   // SCALES
   const x = d3
@@ -105,8 +105,8 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
       .call(
         d3
           .axisTop(x)
-          .tickSize(0)
-          .tickSizeOuter(0)
+          .tickSize(2)
+          .tickSizeOuter(2)
       )
       .call(g => g.select('.domain').remove())
       .selectAll('text')
@@ -119,7 +119,7 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
       .call(
         d3
           .axisLeft(y)
-          .tickSize(0)
+          .tickSize(2)
           .tickPadding(4)
       )
       .call(g => g.select('.domain').remove())
