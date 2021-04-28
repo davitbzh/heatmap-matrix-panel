@@ -126,7 +126,7 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
       .selectAll('text')
       .style('text-anchor', 'end')
       .style('fill', '#00ff00')
-      .attr('x', 4);
+      .attr('x', 1);
 
   // VALUE FORMATING
   const formatValue = ({ category, pivotIndex }) =>
