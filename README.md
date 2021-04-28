@@ -57,3 +57,11 @@ In both cases, a symbol indicator is visible at the top-left side of the panel i
 ### Toggle Color on Click
 
 Boolean. If true toggles color between the two coloring options. Default false.
+
+## Installation
+nvm install 12.22.1
+nvm use 12.22.1
+npm install --global yarn
+
+yarn install
+yarn build

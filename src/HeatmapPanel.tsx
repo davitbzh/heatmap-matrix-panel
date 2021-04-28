@@ -279,6 +279,45 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
           bounds.selectAll('.change-direction-symbol').text(getSymbol);
         };
 
+        //---------------------------------------
+        /*
+        // create a tooltip
+        var tooltip = d3.select(nodes[i])
+            .append("div")
+            .style("opacity", 0)
+            .attr("class", "tooltip")
+            .style("background-color", "white")
+            .style("border", "solid")
+            .style("border-width", "2px")
+            .style("border-radius", "5px")
+            .style("padding", "5px")
+
+        // Three function that change the tooltip when user hover / move / leave a cell
+        var mouseover = function(d) {
+            tooltip
+              .style("opacity", 1)
+            d3.select(this)
+              .style("stroke", "black")
+              .style("opacity", 1)
+          }
+
+        var mousemove = function(d) {
+            tooltip
+              .html("The exact value of<br>this cell is: " + d.value)
+              .style("left", (d3.mouse(this)[0]+70) + "px")
+              .style("top", (d3.mouse(this)[1]) + "px")
+          }
+
+        var mouseleave = function(d) {
+            tooltip
+              .style("opacity", 0)
+            d3.select(this)
+              .style("stroke", "none")
+              .style("opacity", 0.8)
+          }
+          */
+        //---------------------------------------
+
         // DRAWING
         const item = d3
           .select(nodes[i])
@@ -303,14 +342,14 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
           .text(formatValue);
 
         // VALUES
-        item
-          .append('text')
-          .attr('class', 'cell-label')
-          .attr('font-size', 10)
-          .attr('pointer-events', 'none')
-          .attr('text-anchor', 'middle')
-          .call(displayTotals)
-          .call(displayPercentages);
+        //item
+        //  .append('text')
+        //  .attr('class', 'cell-label')
+        //  .attr('font-size', 10)
+        //  .attr('pointer-events', 'none')
+        //  .attr('text-anchor', 'middle');
+        //  .call(displayTotals)
+        //  .call(displayPercentages);
       });
 
     // AXIS
