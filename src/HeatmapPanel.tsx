@@ -15,7 +15,7 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
 
   // -----------------------  CHART CONFIGURATION  -----------------------
   const config = {
-    cellPadding: 0.16,
+    cellPadding: 0.01,
     background: '#000000',
     removeEmptyCols: true,
     colorBy: COLOR_CELL_BY[options.colorCellBy],
@@ -84,7 +84,8 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
   const colorAsHeatmap = d3
     .scaleSequential()
     .domain(categoryExtent)
-    .interpolator(t => d3.interpolateReds(clampColorRange(t)));
+    //.interpolator(t => d3.interpolateReds(clampColorRange(t)));
+    .interpolator(t => d3.interpolateRgb('#baee86', '#ec3716'));
 
   // SCALES
   const x = d3
