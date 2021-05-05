@@ -130,7 +130,7 @@ export const HeatmapPanel: React.FC<Props> = ({ options, data, width, height }) 
 
   // VALUE FORMATING
   const formatValue = ({ category, pivotIndex }) =>
-    parseFloat(d3.format('.2f')(categoryFields.find(field => field.name === category).values.get(pivotIndex)));
+    parseFloat(d3.format('.6f')(categoryFields.find(field => field.name === category).values.get(pivotIndex)));
 
   const getValues = ({ category, pivotIndex }) => {
     const referenceIndex = pivotIndex + config.referenceChange;
